@@ -18,7 +18,12 @@ const docterSchema = new mongoose.Schema({
   experienceInYear: {
     type:Number,
     default:0.,
-  }
+  },
+  workingHospitals:
+  {
+    type:mongoose.Schema.Type.ObjectId,
+    ref:"Hospital",
+  },
 }, { timestamps: true });
 
 export const Docter = mongoose.model('Docter', docterSchema);
